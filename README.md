@@ -1,0 +1,2 @@
+# CSC-101-UVic-Untangling-the-Web
+An introduction to coding-related skills for people interested in getting involved in the tech sector.  Fundamentals of user experience, social media, digital marketing, privacy, security and web-traffic analytics are considered in case studies involving typical web-based applications. Topics include browser-based user interface design; data modelling, management, and querying; deploying and testing cloud-based solutions.  Students will get hands on experience building and analyzing real world applications.

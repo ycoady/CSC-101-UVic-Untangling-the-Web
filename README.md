@@ -1,2 +1,7 @@
-# CSC-101-UVic-Untangling-the-Web
-An introduction to coding-related skills for people interested in getting involved in the tech sector.  Fundamentals of user experience, social media, digital marketing, privacy, security and web-traffic analytics are considered in case studies involving typical web-based applications. Topics include browser-based user interface design; data modelling, management, and querying; deploying and testing cloud-based solutions.  Students will get hands on experience building and analyzing real world applications.
+# CS 101 Untangling the Web: Analyzing and Architecting  Digital Solutions 
+![GitHub Logo](https://upload.wikimedia.org/wikipedia/commons/5/50/Geography_of_Twitter_%40replies_%286238509140%29.jpg)
+
+By Eric Fischer (Geography of Twitter @replies) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons
+
+
+Interested in getting involved in the tech sector?  Finding the right place to start can be challenging!  Whether you are considering a bootcamp, MOOC, diploma, or degree, starting with an introduction to the landscape of the world of Web-centric computing can help!  

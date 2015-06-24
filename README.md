@@ -4,16 +4,17 @@
 >>>By Eric Fischer (Geography of Twitter @replies) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons
 
 
-Interested in getting involved in the tech sector but don't know where to start?  MOOCs, bootcamps, diplomas and degrees all offer different paths, and finding the right one for your lifestyle can be challenging.  If you want to take a first step into the world of web-centric computing with a group of like-minded people, and understand the opportunities available for getting involved, why don't you consider the _Untangling the Web_ series?  
+Interested in getting involved in the tech sector but don't know where to start?  MOOCs, bootcamps, diplomas and degrees all offer different paths, and finding the right fit for your lifestyle can be challenging.  The _Untangling the Web_ series is designed help you take that first step into the world of web-centric computing with a group of like-minded people, and identify the landscape of opportunities to further advance  
 
-This course is an introduction to analyzing and building web-based applications that manage critical information about people and organizations.  By the end of the course, you will have an understanding of _full stack_ development, with both front-end and back-end examples for your digital portfolio.  Course content is project-based, and will include the opportunity to collect critical feedback from industry mentors along the way. 
+This course is an introduction to analyzing and building web-based applications that manage critical information about people and organizations.  By the end of the course, you will have an understanding of _full stack_ development, with representative front-end and back-end examples you can use as a start towards a digital portfolio.  Course content is project-based, and will include the opportunity to learn from industry mentors along the way. 
 
 Coming _this September_ to Victoria, you can select any one, or all three of the following modules from the _Untangling the Web_ series:
 
 ***
 
 ###[Untangling the Web: Deconstructing Digital Marketing](https://www.uvcs.uvic.ca/Course/Untangling-the-Web-Building-Web-Apps/TECC101/)
-In this short course (1 evening a week for 4 weeks), you will learn how to analyze digital ecosystems including: social media, marketing, product creation and search engine optimization. We will look at architecting design strategies for agile digital solutions using web and cloud technologies. You will gain hands-on experience with analysis tools for real-world applications and have the opportunity to present your analysis and recommendations to the technology community at [Fort Tectoria] (http://forttectoria.ca/).
+In this short course (1 evening a week for 4 weeks), you will learn how to analyze digital ecosystems using tools to monitor and analyze _web traffic_, or the way people click and navigate through web applications.  Emphasis will be on trends associated with  social media, marketing, product creation and strategies for working with search engines. We will look at architecting design strategies for agile digital solutions using freely available web and cloud technologies. You will gain hands-on experience with analysis tools for real-world applications and have the opportunity to present your analysis and recommendations to the technology community at [Fort Tectoria] (http://forttectoria.ca/).
+
 
 ***
 

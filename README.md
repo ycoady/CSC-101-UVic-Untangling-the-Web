@@ -4,9 +4,11 @@
 >>>By Eric Fischer (Geography of Twitter @replies) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons
 
 
-Interested in getting involved in the tech sector?  Finding the right place to start can be challenging.  Take a first step into the world of web-centric computing with a group of like-minded people, with one evening a week of class time.  This course is an introduction to building and analyzing web-based applications with large scale data storage.  As a bridge into a bootcamp, MOOC, diploma, or degree, by the end of the course you will have started to build a digital portfolio, while collecting critical feedback from industry mentors along the way. 
+Interested in getting involved in the tech sector but don't know where to start?  MOOCs, bootcamps, diplomas and degrees all offer different paths, and finding the right one for your lifestyle can be challenging.  If you want to take a first step into the world of web-centric computing with a group of like-minded people, and understand the opportunities available for getting involved, the _Untangling the Web_ series could be for you.  
 
-Coming this September to Victoria, you can select any one, or all three of the following modules from the _Untangling the Web_ series:
+This course is an introduction to analyzing and building web-based applications that manage vast amounts of information about people and organizations.  By the end of the course, you will have an understanding of _full stack_ technology, with both front-end and back-end examples for your digital portfolio, while collecting critical feedback from industry mentors along the way. 
+
+Coming _this September_ to Victoria, you can select any one, or all three of the following modules from the _Untangling the Web_ series:
 
 ***
 

@@ -4,7 +4,7 @@
 >>>By Eric Fischer (Geography of Twitter @replies) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons
 
 
-Interested in getting involved in the tech sector but don't know where to start?  MOOCs, bootcamps, diplomas and degrees all offer different paths, and finding the right fit for your lifestyle can be challenging.  The _Untangling the Web_ series is designed help you take that first step into the world of web-centric computing with a group of like-minded people, and identify the landscape of opportunities to further advance  
+Interested in getting involved in the tech sector but don't know where to start?  MOOCs, bootcamps, diplomas and degrees all offer different paths, and finding the right fit for your lifestyle can be challenging.  The _Untangling the Web_ series is designed help you take that first step into the world of web-centric computing with a group of like-minded people, and identify learning and career options for people who are just getting started.  
 
 This course is an introduction to analyzing and building web-based applications that manage critical information about people and organizations.  By the end of the course, you will have an understanding of _full stack_ development, with representative front-end and back-end examples you can use as a start towards a digital portfolio.  Course content is project-based, and will include the opportunity to learn from industry mentors along the way. 
 

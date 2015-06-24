@@ -6,7 +6,7 @@
 
 Interested in getting involved in the tech sector but don't know where to start?  MOOCs, bootcamps, diplomas and degrees all offer different paths, and finding the right fit for your lifestyle can be challenging.  The _Untangling the Web_ series is designed to help you take that first step into the world of web-centric computing with a group of like-minded people.  This series includes an introduction to resources, programs, and career options for people who have no prior experience in tech sector.  
 
-This course is an introduction to analyzing and building web-based applications that manage critical information about people and organizations.  By the end of the course, you will have an understanding of _full stack_ development, with representative front-end and back-end examples you can use as a start towards a digital portfolio.  Course content is project-based, and will include the opportunity to learn from industry mentors along the way. 
+Topics include an introduction to tools analyzing and building web-based applications that manage critical information about people and organizations.  By the end of the course, you will have an understanding of _full stack_ development, with representative front-end and back-end examples you can to start your own digital portfolio.  Course content is project-based, and will include the opportunity to learn from industry mentors along the way. 
 
 Coming _this September_ to Victoria, you can select any one, or all three of the following modules from the _Untangling the Web_ series:
 

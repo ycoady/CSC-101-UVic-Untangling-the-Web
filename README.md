@@ -1,7 +1,7 @@
 # CSc 101 Untangling the Web: Analyzing and Architecting Digital Solutions 
 ![GitHub Logo](https://upload.wikimedia.org/wikipedia/commons/5/50/Geography_of_Twitter_%40replies_%286238509140%29.jpg)
 
->>>By Eric Fischer (Geography of Twitter @replies) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons
+> By Eric Fischer (Geography of Twitter @replies) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons
 
 
 Interested in getting involved in the tech sector but don't know where to start?  Meetups, MOOCs, bootcamps, diplomas and degrees all offer different paths, and finding the right fit for your lifestyle when you are a newcomer to the community can be quite challenging!  The _Untangling the Web_ series is designed to help you take that first step into the world of web-centric computing with a group of like-minded people.  This series includes an introduction to resources, programs, and career options for people who have no prior experience in the tech sector.  

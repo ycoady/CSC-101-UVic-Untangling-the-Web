@@ -8,6 +8,9 @@ Interested in getting involved in the tech sector but don't know where to start?
 
 Topics include an introduction to tools for analyzing and building web-based applications that manage critical information about people and organizations.  By the end of the course, you will have an understanding of _full stack_ development, with representative front-end and back-end examples for your own digital portfolio.  Course content is project-based, and will include the opportunity to learn from industry mentors along the way. 
 
+***
+***
+
 Coming _this September_ to Victoria, you can select any one, or all three of the following modules from the _Untangling the Web_ series:
 
 ***
@@ -25,3 +28,17 @@ In this short course (1 evening a week for 4 weeks), you will learn how to creat
 
 ###[Untangling the Web: Data Management and Visualization](https://www.uvcs.uvic.ca/Course/Untangling-the-Web-Building-Web-Apps/TECC103/)
 In this short course (1 evening a week for 4 weeks), you will learn how to work with requirements for handling data, or _back-end_ web development.  Topics include privacy, security, querying and visualization. We will look at architecting back-end solutions involving databases and cloud technologies. You will design and build a representative back-end for a real-world application of your choice, and have the opportunity to share your work with the technology community at [Fort Tectoria] (http://forttectoria.ca/).
+
+***
+***
+### Coaching Team
+
+* Yvonne Coady, Professor, Computer Science UVic
+* Andrew Hobden, Computer Science UVic
+* TBA! :) 
+
+***
+
+### Industry Mentors
+* TBA! :) 
+

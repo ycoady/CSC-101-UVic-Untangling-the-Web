@@ -35,12 +35,12 @@ In this short course (1 evening a week for 4 weeks), you will learn how to work 
 
 * ![Yvonne](http://academic.research.microsoft.com/Photo/278985.jpg) Yvonne Coady, Professor, Computer Science UVic
 * ![Andrew](https://yt3.ggpht.com/-HoAQC8OY-0s/AAAAAAAAAAI/AAAAAAAAAAA/xKJrPZGe46k/s100-c-k-no/photo.jpg) Andrew Hobden, Computer Science UVic
-* more TBA! :) 
+* more coming soon! :) 
 
 ***
 
 ### Industry Mentors
-* ![Erin!](https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMGAAAAJDI5MTIzNjYzLTM4ZTctNGYxYi04MDI1LWExZGQxMGM1ZmI1Ng.jpg) Erin Athene, Executive in Residence VIATec, Ladies Learning Code Chapter Lead
+* ![Erin!](https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMGAAAAJDI5MTIzNjYzLTM4ZTctNGYxYi04MDI1LWExZGQxMGM1ZmI1Ng.jpg) Erin Athene, Executive in Residence VIATeC, Ladies Learning Code Chapter Lead
 * ![Jason](https://media.licdn.com/media/p/2/000/02d/386/2c4a028.jpg) Jason Warner, Director of Engineering Heroku
-* more TBA! :) 
+* more coming soon! :) 
 

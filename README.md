@@ -40,7 +40,7 @@ In this short course (1 evening a week for 4 weeks), you will learn how to work 
 ***
 
 ### Industry Mentors
-* ![Erin!](http://www.viatec.ca/sites/default/files/imagecache/company_logo/images/profile/9580/biopic.jpg) Erin Athene, Executive in Residence VIATec, Ladies Learning Code Chapter Lead
+* ![Erin!](https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMGAAAAJDI5MTIzNjYzLTM4ZTctNGYxYi04MDI1LWExZGQxMGM1ZmI1Ng.jpg) Erin Athene, Executive in Residence VIATec, Ladies Learning Code Chapter Lead
 * ![Jason](https://media.licdn.com/media/p/2/000/02d/386/2c4a028.jpg) Jason Warner, Director of Engineering Heroku
 * TBA! :) 
 

@@ -5,6 +5,6 @@
 
 Course [info] (http://webhome.cs.uvic.ca/~ycoady/utw/)
 
-Slides from [day one] (http://slides.com/ycoady/utw1/live#/)
-
+Day 1: [course overview] (http://slides.com/ycoady/utw1/live#/) and [preliminary landscape]! 
+       
 Please do create an account on GitHub right away---it will help us collaborate down the road! :) 

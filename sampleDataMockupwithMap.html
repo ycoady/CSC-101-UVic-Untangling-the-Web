@@ -1,0 +1,58 @@
+
+
+<---  
+    Based on the example here:
+    http://www.w3schools.com/json/tryit.asp?filename=tryjson_create
+    
+    This creates an "event" that might look like something we get from another server!
+    The data format is called "JSON" (JavaScript Object Notation)
+--->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script
+    src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+    var myCenter=new google.maps.LatLng(48.424134,-123.363127);
+    var marker;
+    function initialize() {
+       var mapProp = {
+         center:myCenter,
+         zoom:18,
+         mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker=new google.maps.Marker({
+            position:myCenter,
+            animation:google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+
+  <h1>Mocking up our data!!!<h1>
+  <h2>JSON Object Creation in JavaScript</h2>
+
+  <p id="demo"></p>
+
+  <script>
+     var text = '{"event":"Our Presentations","street":"777 Fort Street","time":"7pm"}';
+     var obj = JSON.parse(text);
+
+     document.getElementById("demo").innerHTML =
+     obj.event + "<br>" +
+     obj.street + "<br>" +
+     obj.time;
+  </script>
+
+  <div id="googleMap" style="width:500px;height:380px;"></div>
+
+</body>
+</html>

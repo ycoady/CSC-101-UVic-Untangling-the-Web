@@ -1,12 +1,10 @@
-
-
-<---  
+<!--  
     Based on the example here:
     http://www.w3schools.com/json/tryit.asp?filename=tryjson_create
     
     This creates an "event" that might look like something we get from another server!
     The data format is called "JSON" (JavaScript Object Notation)
---->
+-->
 
 <!DOCTYPE html>
 <html>
@@ -25,6 +23,7 @@
          mapTypeId:google.maps.MapTypeId.ROADMAP
         };
         
+        var image = 'images/logo.png'
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
         var marker=new google.maps.Marker({
             position:myCenter,

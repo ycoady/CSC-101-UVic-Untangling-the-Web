@@ -11,6 +11,15 @@ Date     | Topics                 | Homework
 [Sept 23] (http://slides.com/ycoady/sketching-the-landscape-3/live#/)   | Our LANDSCAPES! Review, Guest speaker, Erin Athene! Creating a "pull request" on [GitHub](https://help.github.com/articles/using-pull-requests/), our [WIKD server] (http://html5-helloworld-125765.nitrousapp.com:3000/), basics of [A/B testing] (http://blog.crazyegg.com/2015/06/02/ab-testing-google-analytics/) with Google Analytics [(playlist on YouTube)](https://www.youtube.com/playlist?list=PLP0MTopvRtxC3YkEeNuq1XUpuZvOamDH1) |  (1) Post comments for the questions on Moodle, (2) design for case studies, and (3) messing with your OWN Google Analytics results!
 [Sept 30](http://slides.com/ycoady/deck-5/live#/)  | SEO starter [guide](http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf), brainstorming, [storyboarding](https://uxmag.com/articles/storyboarding-in-the-software-design-process), and app design, bringing it all together! |  (1) Comments, (2) storyboards and (3) teams4change! 
 [Oct 7] (http://slides.com/ycoady/deck-6/live#/) | Review, [Agile not Fragile](http://www.slideshare.net/SunilMundra/agile-is-not-fragile-36993453), Front vs Back ends!, Angry Birds [Hack](http://thenextweb.com/apps/2011/05/11/angry-birds-for-chrome-already-hacked-unlocking-all-levels/), W3 schools [localstorage](http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webstorage_local_clickcount). CityVibes!, GitHub vs Git |  App design!  CityVibes or one of your own, teams of 3 or more! 
+[Oct 14] (http://slides.com/ycoady/deck-6-7/live#/) | Meeting with stakeholders (Heather and Katie!), wisdom from the trenches (Hoverbear! and the [GoV wepage](https://gatheringourvoices.bcaafc.com/)), Erin and Market Validation, your group's storyboard brainstorming  |  Development of your app design, data requirements, populating your repo! :)
 
-       
+### Useful Links
+
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/), wisdom, references, and tutorials from the people that make Firefox. Teaches CSS, JS, and HTML.
+* [Atom](https://atom.io/), a great "Text Editor" that is, it's an editor for code. It will highlight your code for you, format it, and can be extended however you please.
+* [Developer Tools Overview](https://developer.mozilla.org/en-US/Learn/Discover_browser_developer_tools) for Firefox, teaches you how to use the developer tools. You can also look at the special [dev edition](https://www.mozilla.org/en-US/firefox/developer/) if you want to experiment with new things.
+* [Rosetta Code](http://rosettacode.org/), [Khan](https://www.khanacademy.org/), [Codeschool](https://www.codeschool.com/), [Code Academy](https://www.codecademy.com/), [HackerRank](https://www.hackerrank.com/), all great places to find problems and learn to code.
+* [Markdown](https://github.com/krman009/Github-Flavoured-Markdown), it's a nice plaintext format that this README is in!
+* [IRC](https://wiki.mozilla.org/IRC), lost and need help with code? Can't find answers via Google? Check out the `#js` channel for people to ask.
+
 Please do create an account on GitHub right away---it will help us collaborate on our *index.html* file down the road! :)  Let's see if we can get some [Pull Requests] (https://guides.github.com/activities/hello-world/) rocking soon!

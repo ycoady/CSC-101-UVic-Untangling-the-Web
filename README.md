@@ -21,6 +21,6 @@ Date     | Topics                 | Homework
 * [Rosetta Code](http://rosettacode.org/), [Khan](https://www.khanacademy.org/), [Codeschool](https://www.codeschool.com/), [Code Academy](https://www.codecademy.com/), [HackerRank](https://www.hackerrank.com/), all great places to find problems and learn to code.
 * [Markdown](https://github.com/krman009/Github-Flavoured-Markdown), it's a nice plaintext format that this README is in!
 * [IRC](https://wiki.mozilla.org/IRC), lost and need help with code? Can't find answers via Google? Check out the `#js` channel for people to ask.
-* [Our video index](), a short description of the videos on our YouTube playlist (UntanglingTheWeb)!]
+* [Our video index](https://github.com/ycoady/CSC-101-UVic-Untangling-the-Web/wiki), a short description of the videos on our YouTube playlist (UntanglingTheWeb)!]
 
 Please do create an account on GitHub right away---it will help us collaborate on our *index.html* file down the road! :)  Let's see if we can get some [Pull Requests] (https://guides.github.com/activities/hello-world/) rocking soon!

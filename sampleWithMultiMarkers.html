@@ -39,48 +39,57 @@ https://developers.google.com/maps/documentation/javascript/examples/marker-anim
 </head>
 
 <body>
-  <div id="floating-panel">
-    <button id="drop" onclick="putMarkers()">Drop Markers</button>
-    <div id="googleMap" style="width:500px;height:380px;"></div>
- </div>
- <div id="map"></div>
 
  <script>
-    var map;
+    var ourMap;
 
     function initialize() {
-       var myCenter = new google.maps.LatLng(48.424134,-123.363127);
-       var mapProp = {
+      var myCenter = new google.maps.LatLng(48.424134,-123.363127);
+      var mapProp = {
          center:myCenter,
          zoom:18,
          mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
-        map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
-      }
+      };
+      ourMap = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+
+
+    function addMarker(pos, im) {
+      new google.maps.Marker({
+        position: pos,
+        map: ourMap,
+        icon: im,
+        draggable: true,
+        animation: google.maps.Animation.DROP
+      });
+    }
 
     function putMarkers() {
-        // Loop through our array of markers & DROP each one on the map
-        var images = ['images/logo.png', 'images/Mayor-Beer-icon.png'];
-        var markerlist = [
+      // Loop through our array of markers & DROP each one on the map
+      var markerlist = [
             ['Fort Tectoria', 48.424134,-123.363127],
             ['Great Beer', 48.424000,-123.363010]
            ];
-
-        for( i = 0; i < markerlist.length; i++ ) {
-            var position = new google.maps.LatLng(markerlist[i][1], markerlist[i][2]);
-            var marker = new google.maps.Marker({
-                  position: position,
-                  map: map,
-                  title: markerlist[i][0],
-                  icon: images[i],
-                  draggable: true,
-                  animation: google.maps.Animation.DROP
-              });
-        }
+      var images = ['images/logo.png', 'images/Mayor-Beer-icon.png'];
+      for( i = 0; i < markerlist.length; i++ ) {
+          var position = new google.maps.LatLng(markerlist[i][1], markerlist[i][2]);
+          var title = markerlist[i][0];
+          (function(pos, image) {
+            setTimeout(function() {
+                addMarker(pos, image);
+            }, i*500);
+          }(position, images[i]));
+      }
     }
-
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+
+<div id="floating-panel">
+  <button id="drop" onclick="putMarkers()">Drop Markers</button>
+  <div id="googleMap" style="width:500px;height:380px;"></div>
+</div>
+<div id="map"></div>
+
 
 </body>
 </html>

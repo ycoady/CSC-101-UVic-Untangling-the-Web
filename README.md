@@ -12,6 +12,7 @@ Date     | Topics                 | Homework
 [Sept 30](http://slides.com/ycoady/deck-5/live#/)  | SEO starter [guide](http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf), brainstorming, [storyboarding](https://uxmag.com/articles/storyboarding-in-the-software-design-process), and app design, bringing it all together! |  (1) Comments, (2) storyboards and (3) teams4change! 
 [Oct 7] (http://slides.com/ycoady/deck-6/live#/) | Review, [Agile not Fragile](http://www.slideshare.net/SunilMundra/agile-is-not-fragile-36993453), Front vs Back ends!, Angry Birds [Hack](http://thenextweb.com/apps/2011/05/11/angry-birds-for-chrome-already-hacked-unlocking-all-levels/), W3 schools [localstorage](http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webstorage_local_clickcount). CityVibes!, GitHub vs Git |  App design!  CityVibes or one of your own, teams of 3 or more! 
 [Oct 14] (http://slides.com/ycoady/deck-6-7/live#/) | Meeting with stakeholders (Heather and Katie!), wisdom from the trenches (Hoverbear! and the [GoV wepage](https://gatheringourvoices.bcaafc.com/)) and [repo](https://github.com/BCAAFC/Gathering-Our-Voices), Erin and Market Validation, your group's storyboard brainstorming  |  Development of your app design, data requirements, populating your repo! :)
+[Oct 21](http://slides.com/ycoady/deck-8/live#/) | Hackathon!  sprints, scrums and collaboration!  |  Networking event on Oct 22, identify features you need help with!
 
 ### Useful Links
 

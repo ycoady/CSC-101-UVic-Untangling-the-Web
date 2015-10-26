@@ -1,3 +1,7 @@
+
+
+<!DOCTYPE html>
+<html>
 <!--
     Based on the example here:
     https://hpneo.github.io/gmaps/examples/json.html
@@ -5,14 +9,11 @@
     Put this together for taps and pours!
 
 -->
-
-<!DOCTYPE html>
-<html>
 <head>
    <script src = "http://maps.googleapis.com/maps/api/js"></script> 
    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
-   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script type="text/javascript" src="src/gmaps.js"></script>
+   <script type="text/javascript" src="src/gmaps.js"></script>
+   <script type="text/javascript" src="src/prettify.js"></script>
 
   <style>
     html,
@@ -35,8 +36,10 @@
 
   <script>
   var map;
+  var iconEvent = 'https://foursquare.com/img/categories/event/default.png';
+  var iconNightlife = 'https://foursquare.com/img/categories/nightlife/default.png';
 
-    function loadResults (data) {
+    function loadResultsNightlife (data) {
       var items, markers_data = [];
       if (data.venues.length > 0) {
         items = data.venues;
@@ -45,7 +48,6 @@
           var item = items[i];
 
           if (item.location.lat != undefined && item.location.lng != undefined) {
-            var icon = 'https://foursquare.com/img/categories/nightlife/default.png';
 
             markers_data.push({
               lat : item.location.lat,
@@ -53,7 +55,7 @@
               title : item.name,
               icon : {
                 size : new google.maps.Size(32, 32),
-                url : icon
+                url : iconNightlife
               }
             });
           }
@@ -63,10 +65,38 @@
       map.addMarkers(markers_data);
     }
 
+function loadResultsEvent (data) {
+      var items, markers_data = [];
+      if (data.venues.length > 0) {
+        items = data.venues;
+
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+
+          if (item.location.lat != undefined && item.location.lng != undefined) {
+
+            markers_data.push({
+              lat : item.location.lat,
+              lng : item.location.lng,
+              title : item.name + " Visitors: "+ item.stats.checkinsCount, 
+              icon : {
+                size : new google.maps.Size(32, 32),
+                url : iconEvent
+              }
+            });
+          }
+        }
+      }
+
+      map.addMarkers(markers_data);
+    }
+
+    /*
     function printResults(data) {
       $('#foursquare-results').text(JSON.stringify(data));
       //prettyPrint();
     }
+    */
 
     $(document).on('click', '.pan-to-marker', function(e) {
       e.preventDefault();
@@ -84,7 +114,7 @@
     });
 
     $(document).ready(function(){
-     // prettyPrint();
+      
       map = new GMaps({
         div: '#map',
         lat: 48.4209650,
@@ -100,10 +130,20 @@
         }
       });
 
-      var xhr = $.getJSON('https://coffeemaker.herokuapp.com/foursquare.json?q[near]=Victoria,%20BC&q[query]=Beer');
+//plotting beer
+      var xhr = $.getJSON('https://coffeemaker.herokuapp.com/foursquare.json?q[near]=Victoria,%20BC&q[query]=Beer')
+      icon = 'https://foursquare.com/img/categories/nightlife/default.png';
 
-      xhr.done(printResults);
-      xhr.done(loadResults);
+      xhr.done(loadResultsNightlife);
+
+//plotting fun!
+      var xhr2 = $.getJSON('https://coffeemaker.herokuapp.com/foursquare.json?q[near]=Victoria,%20BC&q[query]=fun');
+
+      //xhr.done(printResults);
+
+     
+
+      xhr2.done(loadResultsEvent);
     });
     </script>
 

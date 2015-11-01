@@ -11,48 +11,46 @@
 <!--
    Need a few things to get started!  Maps, some help with JavaScript from JQuery, and our own copy of gmaps.js!
 -->
-   <script src = "http://maps.googleapis.com/maps/api/js"></script> 
+   <script src = "http://maps.googleapis.com/maps/api/js"></script>
    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
    <script type="text/javascript" src="src/gmaps.js"></script>
+   <link href='src/styles.css' rel='stylesheet' type='text/css' />
+   <link rel="stylesheet" type="text/css" href="src/examples.css" />
 
-<!--
-  Embedding some CSS in here to make things look pretty!  This came STRAIGHT from the example!
--->
-
-  <style>
-    html, body,
-    #map {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    
-    #map {
-      background: #58B;
-    }
-  </style>
  </head>
- 
+
  <body>
- <!-- 
-    So funny... all that is in the content is the spot to put the map! :) 
- -->
-    <div id="map"></div>
-    
+ <div id="body">
+    <h3>Things around Victoria!</h3>
+
+    <div class="row">
+      <div class="span11">
+         <div class="popin">
+           <div id="map"></div>
+         </div>
+      </div>
+
+      <div class="span6">
+          <h3>Results for 'Beer' and 'Fun' near 'Victoria':</h3>
+          <ul id="results"></ul>
+      </div>
+    </div>
+</div>
+
     <script>
         var map;  //we will make this a Gmap!
-        
+
         //going to "borrow" markers from foursquare!!!
         var iconEvent = 'https://foursquare.com/img/categories/event/default.png';
         var iconNightlife = 'https://foursquare.com/img/categories/nightlife/default.png';
-    
-    
+
+
         //puts the "nightlife" markers for locations where beer is sold on the map!
         function loadResultsNightlife (data) {
             var items, markers_data = [];
             if (data.venues.length > 0) {
                 items = data.venues;
-                
+
                 //create a whole list of markers for all of the data we have
                 for (var i = 0; i < items.length; i++) {
                     var item = items[i];
@@ -85,7 +83,7 @@
                         markers_data.push({
                             lat : item.location.lat,
                             lng : item.location.lng,
-                            title : item.name + " Visitors: "+ item.stats.checkinsCount, 
+                            title : item.name + " Visitors: "+ item.stats.checkinsCount,
                             icon : {
                                 size : new google.maps.Size(32, 32),
                                 url : iconEvent
@@ -96,7 +94,8 @@
             }
             map.addMarkers(markers_data);
         }
-        
+
+
         //wow!  this repositions the map---when you see the "$" you know JQuery is working for you!
         $(document).on('click', '.pan-to-marker', function(e) {
             e.preventDefault();
@@ -107,15 +106,18 @@
             lng = position.lng();
             map.setCenter(lat, lng);
         });
-        
+
+
         //render the map when the page is ready!
         $(document).ready(function(){
+            alert("making map");
             map = new GMaps({
                 div: '#map',
                 lat: 48.4209650,
                 lng: -123.37332
         });
-      
+
+
         map.on('marker_added', function (marker) {
             var index = map.markers.indexOf(marker);
             $('#results').append('<li><a href="#" class="pan-to-marker" data-marker-index="' + index + '">' + marker.title + '</a></li>');
@@ -123,11 +125,13 @@
                 map.fitZoom();
             }
         });
-        
+
+
+
     //plotting beer locations on the map
       var xhr = $.getJSON('https://coffeemaker.herokuapp.com/foursquare.json?q[near]=Victoria,%20BC&q[query]=Beer')
       xhr.done(loadResultsNightlife);
-      
+
     //plotting fun and or events!!
       var xhr2 = $.getJSON('https://coffeemaker.herokuapp.com/foursquare.json?q[near]=Victoria,%20BC&q[query]=fun');
       xhr2.done(loadResultsEvent);

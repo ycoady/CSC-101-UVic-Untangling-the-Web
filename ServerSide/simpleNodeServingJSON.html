@@ -1,0 +1,64 @@
+
+//this is the way we will communicate with the server
+var http = require('http');
+var dispatcher = require('httpdispatcher');
+
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
+var ObjectId = require('mongodb').ObjectID;
+var url = 'mongodb://0.0.0.0:27017/test';
+
+var myText = "";  //building my own text here to ship to the client!
+
+
+var findRestaurants = function(db, callback) {
+   var cursor = db.collection('restaurants').find( { "address.zipcode": "10075" } );
+   cursor.each(function(err, doc) {
+      assert.equal(err, null);
+      if (doc != null) {
+         myText = myText + "{\"name\": \"" + doc.name + "\" , \"cuisine\": \"" + doc.cuisine + "\", \"location\" : {\"lng\":" + doc.address.coord[0] + ", \"lat\":" + doc.address.coord[1] + "} },";
+      } else {
+         callback();
+      }
+   });
+};
+
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  findRestaurants(db, function() {
+      db.close();
+  });
+});
+
+//A sample GET request
+dispatcher.onGet("/page1", function(req, res) {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader("Access-Control-Allow-Headers", 'Content-Type, X-Requested-With');
+      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+      res.setHeader('Access-Control-Allow-Credentials', 'true');
+      res.setHeader('Content-Type', 'application/json');
+      res.write("{\"venues\" : [" + myText.substring(0, myText.length - 1) + "]}");
+      res.end();
+});
+
+//A sample POST request
+dispatcher.onPost("/post1", function(req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Got Post Data');
+});
+
+//We need a function which handles requests and send response
+function handleRequest(request, response){
+    try {
+        console.log(request.url);
+        dispatcher.dispatch(request, response);
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+//Create a server
+var server = http.createServer(handleRequest).listen(3000, '0.0.0.0');
+
+//Writes to the console that we are in business!
+console.log('Server running at http://0.0.0.0:3000/');

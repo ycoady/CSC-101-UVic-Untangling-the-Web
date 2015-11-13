@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="http://maps.googleapis.com/maps/api/js">
+    </script>
+  </head>
+
+  <body>
+    <script>
+
+      //we can assume that we will GET this info from some webservice that is complete... but for now we are mocking it up!
+      // FIRST as a string...
+      var restaurantData = '{"restaurants": [{"name":"Drake", "coord" : { "lat": 48.4280838370059, "lng": -123.368818023075}}, {"name":"Churchill", "coord" : { "lat": 48.4255563713968, "lng": -123.368125887101}} ]}';
+
+      //THEN converting it to JSON!
+      var restaurantObjects = JSON.parse(restaurantData);
+
+      var mymap;
+
+      //given a name, get the coordinates for mapping---will die horribly if name not found!!! :)
+      function getCoords(restName) {
+        var location;
+        for (var k = 0; k < restaurantObjects.restaurants.length; k++) {
+          var restaurant = restaurantObjects.restaurants[k];
+          if (restaurant.name === restName) {
+            return location = restaurant.coord;
+          }
+        }
+      }
+
+      //adding markder to random places for now!
+      function plotSelection(selection) {
+        var location = getCoords(selection);
+
+        var marker = new google.maps.Marker({
+          position : location,
+          animation : google.maps.Animation.BOUNCE
+        });
+        marker.setMap(mymap);
+      }
+
+      //note this is called by addDomListener, a method associated with google maps below!
+      function initialize() {
+        //victoria, the center of the universe!
+        var myCenter=new google.maps.LatLng(48.424134,-123.363127);
+        var mapProp = {
+          center: myCenter,
+          zoom: 14,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+
+        mymap = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      }
+
+      //here's where the call to initialize actually happens!
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+
+    <!-- notice that this HTML element is refered to by the "getElementById" function above! -->
+    <div id="googleMap" style="width:700px;height:500px;"></div>
+
+    <p onclick="plotSelection('Drake')"><a href="#!">Drake</a></p>
+    <p onclick="plotSelection('Churchill')"><a href="#!">Churchill</a></p>
+
+  </body>
+</html>

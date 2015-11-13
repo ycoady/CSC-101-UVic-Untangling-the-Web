@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="http://maps.googleapis.com/maps/api/js">
+    </script>
+  </head>
+
+  <body>
+    <script>
+
+      //we can assume that we will GET this info from some webservice that is complete... but for now we are mocking it up!
+      // FIRST as a string...
+      var eventData = '{"events": [{"name":"ArtShow", "coord" : { "lat": 48.4280838370059, "lng": -123.368818023075}, "vibes": 0}, {"name":"Concert", "coord" : { "lat": 48.4255563713968, "lng": -123.368125887101}, "vibes":0} ]}';
+
+      //THEN converting it to JSON!
+      var eventObjects = JSON.parse(eventData);
+
+      var mymap;
+
+
+      //this is DANGEROUS not to have any error checking but for now we will use it as an example!
+      function incVibe(eventName) {
+        for (var k = 0; k < eventObjects.events.length; k++) {
+          if (eventObjects.events[k].name === eventName) {
+              eventObjects.events[k].vibes++;
+              return eventObjects.events[k];
+          }
+        }
+      }
+
+      //adding marker for an event, plus a listener for clicking!
+      function plotEvents() {
+
+        for (var k = 0; k < eventObjects.events.length; k++) {
+          var vibeInfo = eventObjects.events[k];
+          var marker = new google.maps.Marker({
+            name: vibeInfo.name,
+            position : vibeInfo.coord,
+            title : vibeInfo.name + " # of good vibes: " + vibeInfo.vibes
+          });
+          marker.setMap(mymap);
+          google.maps.event.addListener(marker, 'click', function () {
+            // do something with this marker ...
+            //this.setTitle('I am clicked');
+
+            var goodVibeEvent = incVibe(this.name);
+            this.setTitle(goodVibeEvent.name + "# of good vibes: " + goodVibeEvent.vibes );
+          });
+        }
+      }
+
+      //note this is called by addDomListener, a method associated with google maps below!
+      function initialize() {
+        //victoria, the center of the universe!
+        var myCenter=new google.maps.LatLng(48.424134,-123.363127);
+        var mapProp = {
+          center: myCenter,
+          zoom: 14,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+
+        mymap = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      }
+
+      //here's where the call to initialize actually happens!
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+
+    <!-- notice that this HTML element is refered to by the "getElementById" function above! -->
+    <div id="googleMap" style="width:700px;height:500px;"></div>
+
+    <button type="button" onclick="plotEvents()">Show events!!</button>
+
+  </body>
+</html>

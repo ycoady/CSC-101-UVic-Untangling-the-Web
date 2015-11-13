@@ -1,0 +1,46 @@
+<body>
+<script>
+var brewdata = 
+'{"breweries": [ {"name":"Hoyne","restaurants":["Drake","Churchill"]},{"name":"Phillips", "restaurants":["Churchill"]} ]}';
+
+var restaurantdata =
+'{"restaurants": [{"name":"Drake", "coord" : { "lat": 48.4280838370059, "lng": -123.368818023075}}, {"name":"Churchill", "coord" : { "lat": 48.4255563713968, "lng": -123.368125887101}} ]}';
+
+
+var myBrews = JSON.parse(brewdata);
+var myRests = JSON.parse(restaurantdata);
+
+function findAndGet(restName) {
+	var restList = "";
+	for (var k = 0; k < myRests.restaurants.length; k++) {
+			var restaurant = myRests.restaurants[k];
+			if (restaurant.name === restName) {
+				var latitude = restaurant.coord.lat;
+				var longitude = restaurant.coord.lng; 
+				restList = restList + restaurant.name + " at: " + latitude + ", " + longitude + ".\n";
+			}
+	}
+	return restList;
+
+}
+
+function myFunction() { 
+
+	var beerList = ""; //start with an empty list!
+	for (var i = 0; i < myBrews.breweries.length; i++) {
+		var brewery = myBrews.breweries[i];
+		beerList = beerList + brewery.name + ":  \n";
+
+		for (var j = 0; j < brewery.restaurants.length; j++) {
+			var restaurant = brewery.restaurants[j];
+			var restInfo = findAndGet(restaurant);
+			beerList = beerList + restInfo;
+		}
+	}
+	alert(beerList);
+}
+
+myFunction();
+</script>
+</body>
+</html>

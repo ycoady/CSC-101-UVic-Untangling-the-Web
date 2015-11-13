@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- based on the example here: 
+http://www.w3schools.com/json/tryit.asp?filename=tryjson_create
+plus http://jsfiddle.net/6bjy9nxh/light/ using chart.js, documentation
+http://www.chartjs.org/docs/, github here https://github.com/nnnick/Chart.js
+-->
+
+<html>
+
+<head>
+    <script src="src/Chart.js"></script>
+</head>
+<body>
+
+
+
+<h2>Today's Cycle Counts! (Thanksgiving 2015!)</h2>
+
+<p id="counts"></p>
+
+<h2>So far we have...</h2>
+<p id="grandtotal"></p>
+
+<h2>Comparing to Thanksgiving 2014</h2>
+
+<canvas id="counterCan" width="500" height="350"></canvas>
+
+<script>
+
+//here we are mocking up data, mostly will come from a JSON representation! :) 
+var counters2014 = '{"counter1":142, "counter2":151, "counter3":127}';
+var counters2015 = '{"counter1":102, "counter2":251, "counter3":272}';
+
+
+var obj1 = JSON.parse(counters2014);
+var obj2 = JSON.parse(counters2015);
+
+
+//just printing it out the the screen... data is treated as text
+document.getElementById("counts").innerHTML = 
+obj2.counter1 + "<br>" +
+obj2.counter2 + "<br>" +
+obj2.counter3 + "<br>";
+
+
+//this allows us to do some calculations with the data, transforming to integers!
+var c1 = parseInt(obj2.counter1);
+var c2 = parseInt(obj2.counter2);
+var c3 = parseInt(obj2.counter3);
+var total = c1 + c2 + c3;
+
+document.getElementById("grandtotal").innerHTML = "<p>This many: " + total + "</p>";
+
+//getting more integers for the charting
+var c1old = parseInt(obj1.counter1);
+var c2old = parseInt(obj1.counter2);
+var c3old = parseInt(obj1.counter3);
+
+//setting up the data for the charting!
+var barData = {
+    labels: ['Counter1', 'Counter2', 'Counter3'],
+    datasets: [
+        {
+            label: 'Sept 2014',
+            fillColor: '#382765',
+            data: [c1old, c2old, c3old]
+        },
+        {
+            label: 'Sept 2015',
+            fillColor: '#7BC225',
+            data: [c1, c2, c3]
+        }
+    ]
+};
+
+var context = document.getElementById('counterCan').getContext('2d');
+var clientsChart = new Chart(context).Bar(barData);
+
+</script>
+
+
+</body>
+</html>

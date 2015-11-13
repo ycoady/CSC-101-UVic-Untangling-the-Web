@@ -1,0 +1,81 @@
+<!--
+    Based on the example here:
+    http://www.w3schools.com/json/tryit.asp?filename=tryjson_create
+
+    This creates an "event" that might look like something we get from another server!
+    The data format is called "JSON" (JavaScript Object Notation)
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+   <script src = "http://maps.googleapis.com/maps/api/js"></script>  
+</head>
+
+<body>
+    <script>
+   
+    //Alert statements help with debugging---you know your script is running and where it is!
+    alert("hi and here we go!");
+
+    var images = ['images/logo.png', 'images/Mayor-Beer-icon.png'];
+
+    var markers = [
+        ['Fort Tectoria', 48.424134,-123.363127],
+        ['Great Beer', 48.424000,-123.363010]
+       ];
+       
+
+    var myCenter = new google.maps.LatLng(48.424134,-123.363127);
+ 
+
+    // This set up is borrowed from the GoogleMap example in W3Schools!
+    function initialize() {
+       alert("in init!");
+
+       var mapProp = {
+         center:myCenter,
+         zoom:18,
+         mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+
+        var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+        // Loop through our array of markers & place each one on the map  
+        for( i = 0; i < markers.length; i++ ) {
+            var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+            marker = new google.maps.Marker({
+              position: position,
+              map: map,
+              title: markers[i][0],
+              icon: images[i]
+            });
+            alert("got one!");
+        }
+    }
+    
+    google.maps.event.addDomListener(window, 'load', initialize); 
+     
+    alert("done");
+    </script>
+
+    <h1>Mocking up our data!!!<h1>
+    <h2>JSON Object Creation in JavaScript</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        var text = '{"event":"Our Presentations","street":"777 Fort Street","time":"7pm"}';
+        var obj = JSON.parse(text);
+
+        document.getElementById("demo").innerHTML =
+        obj.event + "<br>" +
+        obj.street + "<br>" +
+        obj.time;
+    </script>
+
+  <div id="googleMap" style="width:500px;height:380px;"></div>
+
+</body>
+</html>

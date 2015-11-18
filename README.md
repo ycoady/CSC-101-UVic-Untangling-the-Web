@@ -15,7 +15,7 @@ Date     | Topics                 | Homework
 [Oct 21](http://slides.com/ycoady/deck-8/live#/) | Hackathon!  sprints, scrums and collaboration!  |  Networking event on Oct 22, identify features you need help with!
 [Oct 28](http://slides.com/ycoady/deck-9/live#/) | Hackathon (continued)!  JSON and debugging!  Example [here] (https://github.com/ycoady/CSC-101-UVic-Untangling-the-Web/blob/master/sampleGmapsAndJSON.html), debugging and good advice [vidoes 23 -26] (https://github.com/ycoady/CSC-101-UVic-Untangling-the-Web/wiki) |  Post the GitHub repo for your front end!
 [Nov 4](http://slides.com/ycoady/data/live#/) | Welcome to the Back-End!  JSON and MongoDB |  Use your own back-end (Nitrious.io?)! 
-[Nov 18](http://slides.com/ycoady/mean-stack/live#) | Full Stack! Front-end, Back-end, and everything in between! Today's [MEAN](http://mean.io/#!/) and lean approach! JavaScript end-to-end |  Use [RESTful APIs](http://www.restapitutorial.com/lessons/whatisrest.html)! 
+[Nov 18](http://slides.com/ycoady/mean-stack/live#) | Full Stack! Front-end, Back-end, and everything in between! Today's [MEAN](http://mean.io/#!/) and lean approach! JavaScript end-to-end |  Use [RESTful APIs](http://www.restapitutorial.com/lessons/whatisrest.html)! (1) Define the needs for you APPs, (2) Use local storage to create prototype!
 
 ### Useful Links
 

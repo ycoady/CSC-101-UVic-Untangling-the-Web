@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      var mymap;  //o MY!  this is a global variable... could we improve it?!
+
+      // plot the click-able markers on the map
+      function addMarkers(markers) {
+         var infowindow = new google.maps.InfoWindow;
+         var marker, i;
+
+         for (i = 0; i < markers.length; i++) {
+           marker = new google.maps.Marker({
+             position: new google.maps.LatLng(markers[i].lat, markers[i].lng),
+             map: mymap,
+             title: markers[i].title
+           });
+           google.maps.event.addListener(marker, 'click', (function(marker, i) {
+             return function() {
+               infowindow.setContent(marker.title);
+               infowindow.open(mymap, marker);
+             }
+           })(marker, i));
+         }
+      }
+
+       //we are going to add in the information about the number of visitors for each event!
+      function loadResults(data) {
+         var items, markers_data = [];
+         if (data.length > 0) {
+           for (var i = 0; i < data.length; i++) {
+              var item = data[i];
+              if (item.lat != undefined && item.lng != undefined) {
+                 markers_data.push({
+                   lat : item.lat,
+                   lng : item.lng,
+                   title : item.report + " reported by "+ item.user + ".",
+                 });
+              }
+           }
+         }
+         addMarkers(markers_data);
+      }
+
+      //have to run the server on Nitrous container
+      function placeMarkers() {
+         var xhr = $.getJSON('http://node-js-133758.nitrousapp.com:3000/binder');
+         xhr.done(loadResults);
+      }
+
+      //note this is called by addDomListener, a method associated with google maps below!
+      function initialize() {
+        //victoria, the center of the universe!
+        var myCenter=new google.maps.LatLng(48.424134,-123.363127);
+        var mapProp = {
+          center: myCenter,
+          zoom: 14,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        mymap = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        //the KML file was modified relative to the one the city posted!
+        //this is how you load the routes into a googlemap though!
+        var ctaLayer = new google.maps.KmlLayer({
+          url: 'https://gist.githubusercontent.com/ycoady/b6086d8c544d1492bfe0/raw/8ae0397529ab285e0e9180c11f77d8f8cd73124c/BikeRoutesVictoria.kml',
+          map: mymap
+        });
+      }
+      //here's where the call to initialize actually happens!
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <!-- notice that this HTML element is refered to by the "getElementById" function above! -->
+    <div id="googleMap" style="width:700px;height:500px;"></div>
+    <button type="button" onclick="placeMarkers()">Get Reports!!</button>
+
+  </body>
+</html>

@@ -17,6 +17,7 @@ Date     | Topics                 | Homework
 [Nov 4](http://slides.com/ycoady/data/live#/) | Welcome to the Back-End!  JSON and MongoDB |  Use your own back-end (Nitrious.io?)! 
 [Nov 18](http://slides.com/ycoady/mean-stack/live#) | Full Stack! Front-end, Back-end, and everything in between! Today's [MEAN](http://mean.io/#!/) and lean approach! JavaScript end-to-end |  Use [RESTful APIs](http://www.restapitutorial.com/lessons/whatisrest.html)! (1) Define the needs for your APPs, (2) Use HTML5 [local storage](http://www.w3schools.com/html/html5_webstorage.asp) to create your prototype!
 [Nov 25](http://slides.com/ycoady/coding/live#/) | [JavaScript!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)  Variables, values, types, control structures, functions |  [PLAY!](https://repl.it/)  Most important thing you can do is learn to experiment!
+[Dec 2](http://slides.com/ycoady/gettingandposting/live#/) | The Full-Stack, GET and POST, and our pitches at City Hall!!!  |  Change the world :)!
 
 ### Useful Links
 
